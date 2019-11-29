@@ -20,7 +20,7 @@ class ProductController extends Controller
         // // Get products
         // $client = new Client([
         //     // Base URI is used with relative requests
-        //     'base_uri' => 'http://localhost/shopSP01/public/api/',
+        //     'base_uri' => 'http://localhost/wearShopSP01/Sprint%202/public//api/',
         //     // You can set any number of default request options.
         //     'timeout'  => 2.0,
         // ]);

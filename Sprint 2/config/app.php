@@ -2,7 +2,7 @@
 
 return [
     'ship' => 35000,
-    'create_billing' => "http://localhost/shopSP01/public/api/products",
+    'create_billing' => "http://localhost/wearShopSP01/Sprint%202/public//api/products",
     /*
     |--------------------------------------------------------------------------
     | Application Name

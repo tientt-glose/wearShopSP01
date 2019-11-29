@@ -491,9 +491,9 @@ eval("// removed by extract-text-webpack-plugin//# sourceURL=[module]\n//# sourc
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp\htdocs\shopSP01\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\xampp\htdocs\shopSP01\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! C:\xampp\htdocs\shopSP01\resources\sass\responsive.scss */"./resources/sass/responsive.scss");
+__webpack_require__(/*! /mnt/c/xampp/htdocs/wearShopSP01/Sprint 1/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /mnt/c/xampp/htdocs/wearShopSP01/Sprint 1/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /mnt/c/xampp/htdocs/wearShopSP01/Sprint 1/resources/sass/responsive.scss */"./resources/sass/responsive.scss");
 
 
 /***/ })

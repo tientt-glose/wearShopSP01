@@ -25,11 +25,6 @@ function getNumbers()
     $discount = session()->get('coupon')['discount'] ?? 0;
     $code = session()->get('coupon')['code'] ?? null;
     $newSubtotal = (Cart::subtotal() - $discount);
-
-    $tax = config('cart.tax') / 100;
-    $discount = session()->get('coupon')['discount'] ?? 0;
-    $code = session()->get('coupon')['code'] ?? null;
-    $newSubtotal = (Cart::subtotal() - $discount);
     if ($newSubtotal < 0) {
         $newSubtotal = 0;
     }

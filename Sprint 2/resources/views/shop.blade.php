@@ -10,7 +10,7 @@
 
     <div class="breadcrumbs">
         <div class="container">
-            <a href="/shopSP01/public">Home</a>
+            <a href="/wearShopSP01/Sprint%202/public/">Home</a>
             <i class="fa fa-chevron-right breadcrumb-separator"></i>
             <span>Shop</span>
         </div>

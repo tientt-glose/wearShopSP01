@@ -14,7 +14,7 @@ class ConfirmationController extends Controller
     public function index()
     {
         if (! session()->has('success_message')) {
-            return redirect('/wearShopSP01/Sprint%202/public/');
+            return redirect('/');
         }
 
         return view('thankyou');

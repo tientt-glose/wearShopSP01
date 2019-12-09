@@ -2,7 +2,13 @@
 
 return [
     'ship' => 35000,
-    'create_billing' => "http://localhost/wearShopSP01/Sprint%202/public//api/products",
+    'tax' => 0.1,
+    // 'create_billing' => "http://localhost/shopSP01/public/api/billing",
+    'create_billing' => "https://sp-04-order.herokuapp.com/api/order",
+    'add_cart' => "http://shopsp01.herokuapp.com/api/carts",
+    'add_product' => "https://nguyenvd27-ltct-demo.herokuapp.com/api/products",
+    'add_coupon' => "https://secure-mesa-29267.herokuapp.com/api/coupons",
+    
     /*
     |--------------------------------------------------------------------------
     | Application Name
@@ -162,6 +168,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Barryvdh\Cors\ServiceProvider::class,
 
         /*
          * Package Service Providers...

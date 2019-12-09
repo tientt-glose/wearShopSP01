@@ -10,7 +10,7 @@
 
     <div class="breadcrumbs">
         <div class="container">
-            <a href="/wearShopSP01/Sprint%202/public/">Home</a>
+            <a href="/">Home</a>
             <i class="fa fa-chevron-right breadcrumb-separator"></i>
             <a href="{{ route('shop.index') }}">Shop</a>
             <i class="fa fa-chevron-right breadcrumb-separator"></i>

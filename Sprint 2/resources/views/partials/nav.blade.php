@@ -1,7 +1,7 @@
 <header>
     <div class="top-nav container">
         <div class="top-nav-left">
-            <div class="logo"><a href="/wearShopSP01/Sprint%202/public/">Lazavel❣</a></div>
+            <div class="logo"><a href="/">Lazavel❣</a></div>
             @if (! request()->is('checkout'))
             <ul>
                 <li><a href="{{ route('shop.index') }}">Shop</a></li>

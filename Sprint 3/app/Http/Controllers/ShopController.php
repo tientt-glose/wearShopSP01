@@ -14,11 +14,7 @@ class ShopController extends Controller
      */
     public function index()
     {
-        // if (session()->has('user')) echo '1';
-        if (isLogin()==false) return redirect(config('app.auth').'/requirelogin?url='.config('app.api'));
-        echo session()->get('user')['user_id'].'.';
         $products = Product::inRandomOrder()->take(12)->get();
-
         return view('shop')->with('products', $products);
     }
 

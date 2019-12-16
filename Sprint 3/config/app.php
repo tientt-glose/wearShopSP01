@@ -3,13 +3,15 @@
 return [
     'ship' => 35000,
     'tax' => 0.1,
-    'create_billing' => "http://localhost/shopSP01/public/api/billing",
-    // 'create_billing' => "https://sp-04-order.herokuapp.com/api/order",
-    'add_cart' => "http://localhost/shopSP01/public/api/carts",
+    // 'create_billing' => "http://localhost/shopSP01/public/api/billing",
+    'create_billing' => "https://sp-04-order.herokuapp.com/api/order",
+    'add_delivery_units' => "https://online-selling-website.herokuapp.com/delivery_units",
+    'add_cart' => "http://shopsp-01.herokuapp.com/api/carts",
     'add_product' => "https://nguyenvd27-ltct-demo.herokuapp.com/api/products",
     'add_coupon' => "https://secure-mesa-29267.herokuapp.com/api/coupons",
     'auth' => "http://secure-mountain-93147.herokuapp.com",
-    'api' => "http://localhost/shopSP01/public/api",
+    'api' => "http://shopsp-01.herokuapp.com",
+    'nhom9' => "http://localhost:8080/api",
     
     /*
     |--------------------------------------------------------------------------

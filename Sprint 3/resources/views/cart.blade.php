@@ -10,7 +10,7 @@
 
     <div class="breadcrumbs">
         <div class="container">
-            <a href="/shopSP01/public">Home</a>
+            <a href="/">Home</a>
             <i class="fa fa-chevron-right breadcrumb-separator"></i>
             <span>Shopping Cart</span>
         </div>
@@ -63,7 +63,8 @@
                                 @endfor
                             </select>
                         </div>
-                        <div>{{ presentPrice($item->getProductTotalById()) }}</div>
+                        {{-- <div>{{ presentPrice($item->getProductTotalById()) }}</div> --}}
+                        <div>{{ presentPrice($item->price) }}</div>
                     </div>
                 </div> <!-- end cart-table-row -->
                 @endforeach
@@ -88,13 +89,21 @@
             </div> <!-- end cart-totals -->
 
             <div class="cart-buttons">
+                @if ($url==null)
                 <a href="{{ route('shop.index') }}" class="button">Continue Shopping</a>
+                @else
+                <a href="{{ $url.'/api/setsession?user_id='.$user_id.'&session_id='.$session_id }}" class="button">Continue Shopping</a>
+                @endif
                 <a href="{{ route('checkout.index') }}" class="button-primary">Proceed to Checkout</a>
             </div>
             @else
                 <h3>No item in Cart!</h3>
                 <div class="spacer"></div>
+                @if ($url==null)
                 <a href="{{ route('shop.index') }}" class="button">Continue Shopping</a>
+                @else
+                <a href="{{ $url.'/api/setsession?user_id='.$user_id.'&session_id='.$session_id }}" class="button">Continue Shopping</a>
+                @endif
                 <div class="spacer"></div>
             @endif 
 

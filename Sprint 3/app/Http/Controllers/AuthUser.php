@@ -11,34 +11,43 @@ class AuthUser extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function isLogin()
+    public static function isLogin()
     {
+        // dd(session()->get('user')['user_id']);
         if ((session()->has('user'))){
             $client = new \GuzzleHttp\Client();
-            $url = config('app.auth').'/api/getsession/'.session()->get('user')['user_id'];
-            // .session()->get('auth')['session_id'];
+            $url = config('app.auth').'/api/getsession/'.session()->get('user')['session_id'];
             $response = $client->get($url);
-            return $response->getBody();
+            $data = $response->getBody()->getContents();
+            if ($data=='"yes"') return true;
+            else return false;
         }
+        else return false;
     }
 
     public function setSession(Request $request)
     {
         $user_id = $request->user_id;
         $session_id = $request->session_id;
-        echo $user_id;
-        echo $session_id;
         session(['user'=>[
             'user_id' => $user_id,
             'session_id' => $session_id,
         ]]);
-        session()->reflash();
-        // $request->session()->put('user', [
-        //     'user_id' => $user_id,
-        //     'session_id' => $session_id,
-        // ]);
-        // echo session()->get('user')['user_id'];
         return  redirect()->route('shop.index');
+    }
+
+    public function destroySession(Request $request)
+    {
+        $url=null;
+        if (session()->has('user')) {
+            $user=session()->get('user');
+            if (array_key_exists("url",$user))
+            $url=$user['url'];
+        }
+        else $url=null;
+        session()->forget('user');
+        if ($url!=null) return redirect()->away($url.'/api/destroysession');
+        else return redirect()->route('landing-page');
     }
 
     /**

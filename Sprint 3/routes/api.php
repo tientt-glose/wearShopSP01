@@ -26,8 +26,8 @@ Route::get('coupons','CouponsAPIController@index');
 Route::post('billing','BillingAPItest@store');
 Route::post('carts','CartAPIController@store');
 
-Route::get('isLogin','AuthUser@isLogin');
-Route::get('setsession','AuthUser@setSession');
+// Route::get('isLogin','AuthUser@isLogin');
+// Route::get('setsession','AuthUser@setSession');
 
 
 

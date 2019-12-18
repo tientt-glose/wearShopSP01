@@ -72,7 +72,7 @@ class CheckoutController extends Controller
                 'receipt_email' => $request->email,
                 'metadata' => [
                     'contents' => $cartproduct,
-                    'quantity' => Cart::instance('default')->count(),
+                    'quantity' => getQuantity(),
                     'discount' => collect(session()->get('coupon'))->toJson(),
                 ],
             ]);
@@ -113,11 +113,11 @@ class CheckoutController extends Controller
 
             // Testing respon
             // $data = $response->getBody()->getContents();
-            $data = $response->getBody();
-            $data = json_decode($data);
-            dd($data);
+            // $data = $response->getBody();
+            // $data = json_decode($data);
+            // dd($data);
 
-            $this->updateToCartUsersTables($request);
+            $this->updateToCartUsersTables($request,$full_address);
             $cart->delete();
             // Cart::instance('default')->destroy();
             session()->forget('coupon');

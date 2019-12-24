@@ -16,18 +16,4 @@
 
 # Lazavel Shop Project
 
-## Website Demo
-
-* Link: https://shopsp-01.herokuapp.com/
-
-## Installation
-
-1. Clone the repo and `cd` into it
-1. `composer install`
-1. Rename or copy `.env.example` file to `.env`
-1. `php artisan key:generate`
-1. Set your database credentials in your `.env` file
-1. `php artisan migrate`
-1. `npm install`
-1. `php artisan serve` or use Laravel Valet or Laravel Homestead or XAMPP
-1. Visit `localhost:8000` in your browser
+* Clone the repo and `cd` into each Sprint to see detail in readme file.

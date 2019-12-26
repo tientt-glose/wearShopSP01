@@ -29,6 +29,7 @@
 1. Set your database credentials in your `.env` file
 1. Set your Stripe credentials in your `.env` file. Specifically `STRIPE_KEY` and `STRIPE_SECRET`
 1. `php artisan migrate`
+1. `php artisan db:seed`
 1. `npm install`
 1. `php artisan serve` or use Laravel Valet or Laravel Homestead or XAMPP
 1. Visit `localhost:8000` in your browser

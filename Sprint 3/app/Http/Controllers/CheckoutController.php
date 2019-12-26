@@ -49,7 +49,7 @@ class CheckoutController extends Controller
                 session(['payment' => [
                     'type' => 'COD',
                     'card_id' => null,
-                    'card_number' => null
+                    'card_number' => null,
                 ]]);
             }
         }
@@ -105,14 +105,14 @@ class CheckoutController extends Controller
             ]
         ]);
 
-        // Testing respon
+        // // Testing respon
         // $data = $response->getBody()->getContents();
-        // $data = $response->getBody();
-        // // echo $data;
-        // $data = json_decode($data);
-        // dd($data);
+        // // $data = $response->getBody();
+        // echo $data;
+        // // $data = json_decode($data);
+        // dd($response);
 
-        $this->updateToCartUsersTables($request, $full_address);
+        // $this->updateToCartUsersTables($request, $full_address);
         $cart->delete();
         session()->forget('coupon');
         session()->forget('delivery');

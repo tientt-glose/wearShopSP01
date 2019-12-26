@@ -24,7 +24,7 @@ class CheckoutController extends Controller
         $cartproduct= CartProduct::where('cart_id',$cart->id)->get();
 
         if (getQuantitybyCartProduct($cartproduct) == 0) {
-            return redirect()->route('shop.index');
+            return redirect()->route('cart.index');
         }
 
         return view('checkout')->with([
